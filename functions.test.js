@@ -52,16 +52,22 @@ test('should be in array', () => {
 })
 
 //working with async data from axios
-test('user fetched name should be  Leann Graham', () => {
+//Promise
+// test('user fetched name should be  Leann Graham', () => {
+//     expect.assertions(1)
+//     return functions.fetchUSer().then(
+//         data => {
+//             expect(data.name).toEqual('Leanne Graham')
+//         }
+//     )
+// })
+
+//async await
+test('user fetched name should be  Leann Graham', async() => {
     expect.assertions(1)
-    return functions.fetchUSer().then(
-        data => {
-            expect(data.name).toEqual('Leanne Graham')
-        }
-    )
+    const data = await functions.fetchUSer()
+    expect(data.name).toEqual('Leanne Graham') 
 })
-
-
 
 
 
