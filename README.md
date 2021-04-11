@@ -28,4 +28,7 @@ toBeFalsy matches anything that an if statement treats as false
 
 NOTE: If you want to use object/array, toBe will not work you've to use toEqual.... toBe is basically for primitive types and in object/array is a reference type in js!
 
+If you want to continue watch your test, you can use watcher by just adding this in your script:
+"testwath": "jest --watchAll"
+
 Enjoy Testing! 
